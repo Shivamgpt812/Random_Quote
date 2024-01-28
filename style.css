@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+  .wrapper {
+    width: 605px;
+    padding: 30px 30px 25px;
+    border-radius: 10px;
+    background: #ffffff26;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px #0000001a;
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .wrapper header {
+    text-align: center;
+    font-size: calc(32 / 16 * 1rem);
+    font-weight: 600;
+    color: #ffffffd9;
+  }
+  
+  .wrapper .content {
+    margin: 35px 0;
+    color: #ffffffd9;
+  }
+  
+  .content .quote-area {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quote-area i {
+    font-size: calc(15 / 16 * 1rem);
+  }
+  
+  .quote-area i:first-child {
+    margin: 3px 10px 0 0;
+  }
+  
+  .quote-area i:last-child {
+    display: flex;
+    margin: 0 0 3px 10px;
+    align-items: flex-end;
+  }
+  
+  .quote-area .quote {
+    font-size: calc(22 / 16 * 1rem);
+    text-align: center;
+    word-break: break-all;
+  }
+  
+  .content .author {
+    display: flex;
+    font-size: calc(18 / 16 * 1rem);
+    margin-top: 20px;
+    font-style: italic;
+    justify-content: flex-end;
+  }
+  
+  .author span:first-child {
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+  }
+  
+  .wrapper .buttons {
+    border-top: 1px solid rgba(255, 255, 255, 0.289);
+  }
+  
+  .buttons .features {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .features ul {
+    display: flex;
+  }
+  
+  .features ul li {
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    cursor: pointer;
+    color: #ffffffd9;
+    list-style: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffffd9;
+    transition: all 0.3s ease;
+  }
+  
+  .features ul li:first-child {
+    margin-left: 0;
+  }
+  
+  ul li:is(:hover, .active) {
+    background: #ffffff3d;
+  }
+  
+  ul .speech.active {
+    pointer-events: none;
+  }
+  
+  .buttons button {
+    color: #ffffffdc;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: none;
+    border: 2px solid #ffffffd9;
+    transition: all 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background: #ffffff3d;
+  }
+  
+  .buttons button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  @media (max-width: 640px) {
+    body {
+      padding: 0 10px;
+    }
+  
+    .wrapper {
+      width: 450px;
+    }
+  
+    .wrapper header {
+      font-size: calc(25 / 16 * 1rem);
+    }
+  
+    .quote-area i {
+      font-size: calc(13 / 16 * 1rem);
+    }
+  
+    .quote-area .quote {
+      font-size: calc(18 / 16 * 1rem);
+    }
+  
+    .content .author {
+      font-size: 1rem;
+    }
+  
+    .features ul li {
+      border: 1px solid #ffffffd9;
+      height: 40px;
+      width: 40px;
+      font-size: calc(15 / 16 * 1rem);
+    }
+  
+    .buttons button {
+      font-size: calc(14 / 16 * 1rem);
+      padding: 8px 20px;
+      border: 1px solid #ffffffd9;
+    }
+  }
+  
+  @media (max-width: 415px) {
+    .wrapper header {
+      font-size: calc(20 / 16 * 1rem);
+    }
+  
+    .wrapper .content {
+      margin: 15px 0 20px 0;
+    }
+  
+    .quote-area i {
+      font-size: calc(12 / 16 * 1rem);
+    }
+  
+    .quote-area .quote {
+      font-size: 1rem;
+    }
+  
+    .content .author {
+      font-size: calc(14 / 16 * 1rem);
+    }
+  
+    .features ul li {
+      height: 35px;
+      width: 35px;
+      font-size: calc(13 / 16 * 1rem);
+    }
+  
+    .buttons button {
+      padding: 7px 14px;
+      font-size: calc(13 / 16 * 1rem);
+    }
+  }
